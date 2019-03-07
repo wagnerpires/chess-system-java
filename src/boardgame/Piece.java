@@ -10,7 +10,7 @@ public class Piece {
 		position = null;
 	}
 
-	protected Board getBoard() {	/** Tabuleiro acessível somente por classes  e subclasses dentro do mesmo pacote (protected) */
+	protected Board getBoard() {	/** Tabuleiro acessível somente por classes e subclasses dentro do mesmo pacote (protected) */
 		return board;
 	}
 
