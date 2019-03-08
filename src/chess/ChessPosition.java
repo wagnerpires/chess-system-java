@@ -19,7 +19,7 @@ public class ChessPosition {
 		return column;
 	}
 
-//	public void setColumn(char column) {
+//	public void setColumn(char column) {	/** Não permitir alterar a quantidade de colunas do tabuleiro criado */
 //		this.column = column;
 //	}
 
@@ -27,7 +27,7 @@ public class ChessPosition {
 		return row;
 	}
 
-//	public void setRow(int row) {
+//	public void setRow(int row) {	/** Não permitir alterar a quantidade de linhas do tabuleiro criado */
 //		this.row = row;
 //	}
 	

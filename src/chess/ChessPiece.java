@@ -16,11 +16,8 @@ public class ChessPiece extends Piece {
 		return color;
 	}
 
-//	public void setColor(Color color) {
+//	public void setColor(Color color) {		/** Método retirado para não permitir acesso à alteração de color
 //		this.color = color;
 //	}
-
-	
-	
 
 }

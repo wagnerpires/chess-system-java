@@ -19,7 +19,7 @@ public class Board {
 		return rows;
 	}
 
-//	public void setRows(int rows) {
+//	public void setRows(int rows) {		/** Não permitir alterar a quantidade de linhas do tabuleiro criado */
 //		this.rows = rows;
 //	}
 
@@ -27,7 +27,7 @@ public class Board {
 		return columns;
 	}
 
-//	public void setColumns(int columns) {
+//	public void setColumns(int columns) {	/** Não permitir alterar a quantidade de colunas do tabuleiro criado */
 //		this.columns = columns;
 //	}
 	
@@ -53,6 +53,19 @@ public class Board {
 		piece.position = position;
 	}
 	
+	public Piece removePiece(Position position) {
+		if (!positionExists(position)) {
+			throw new BoardException("Position not on the board");
+		}
+		if (piece(position) == null) {
+			return null;
+		}
+		Piece aux = piece(position);
+		aux.position = null;
+		pieces[position.getRow()][position.getColumn()] = null;
+		return aux;
+	}
+	
 	private boolean positionExists(int row, int column) {
 		return row >= 0 && row < rows && column >= 0 && column < columns;
 	}
@@ -67,4 +80,5 @@ public class Board {
 		}		
 		return piece(position) != null;
 	}
+	
 }
